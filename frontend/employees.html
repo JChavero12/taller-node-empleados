@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestor de Empleados</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+  <div class="container mt-4">
+    <h1>Gestor de Empleados</h1>
+    <p class="text-muted">Lista de empleados registrados en el sistema.</p>
+
+    <button class="btn btn-danger mb-3" id="logout">Cerrar sesión</button>
+
+    <div class="card mb-4">
+      <div class="card-body">
+        <h5 id="form-title">Nuevo empleado</h5>
+
+        <input type="hidden" id="employee-id">
+
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="employee-name" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="employee-name">
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="employee-lastname" class="form-label">Apellido</label>
+            <input type="text" class="form-control" id="employee-lastname">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4 mb-3">
+            <label for="employee-phone" class="form-label">Teléfono</label>
+            <input type="text" class="form-control" id="employee-phone">
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="employee-email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="employee-email">
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="employee-address" class="form-label">Dirección</label>
+            <input type="text" class="form-control" id="employee-address">
+          </div>
+        </div>
+
+        <button class="btn btn-primary" id="save-employee">Guardar</button>
+        <button class="btn btn-secondary" id="cancel-edit">Cancelar</button>
+      </div>
+    </div>
+
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Teléfono</th>
+          <th>Email</th>
+          <th>Dirección</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="employee-table">
+      </tbody>
+    </table>
+  </div>
+
+  <script src="./js/employees.js"></script>
+</body>
+</html>
+
